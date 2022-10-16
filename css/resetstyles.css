@@ -1,0 +1,75 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Product Sans";
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol[class],
+li {
+  padding: 0;
+  list-style: none;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+a:hover {
+  color: #565656;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1349px;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1349px;
+}
