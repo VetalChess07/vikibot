@@ -1,5 +1,6 @@
 @import "var.scss";
 @import "resetstyles.scss";
+@import "keyframes.scss";
 
 @font-face {
    font-family: 'Montserrat-ExtraBold';
@@ -100,6 +101,10 @@
 
    right: 0;
    z-index: -1;
+   animation-name: traffic__intro;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
 
 
 
@@ -134,19 +139,18 @@
    margin-left: 100px;
    background-color: #f0a060;
 
-
+   padding: 20px 55px;
    border-radius: 20px;
    border: none;
 
-   a {
-      font-size: 40px;
-      color: #FFF;
-   }
 
-
+   font-size: 40px;
+   color: #FFF
 }
 
-.intro__button:hover {
+
+
+.button:hover {
    background-color: #6af060;
    border: none;
    padding: 10px 15px;
@@ -164,6 +168,10 @@
    top: 451px;
    left: 0;
    z-index: -1;
+   animation-name: traffic__triangles;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
 }
 
 .cubes {
@@ -172,6 +180,10 @@
    -webkit-transform: rotate(60deg);
    transform: rotate(90deg);
    transform: rotate(0deg);
+   animation-name: traffic__cubes;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
 }
 
 .hero {
@@ -215,8 +227,8 @@
    width: 100%;
    padding: 0px 0 100px 0;
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: repeat(3, 1fr);
+
+   grid-template-rows: auto;
    grid-gap: 10px;
 
    .parent__img-item {
@@ -234,8 +246,9 @@
 
    .parent__item-text {
       border-radius: 10px;
-      background-color: #433333;
+      background-color: #ffc8a8;
       padding: 10px;
+
 
    }
 
@@ -248,28 +261,23 @@
    display: flex;
    align-items: center;
 
-   .parent__img-robot {
-      width: 100%;
-
-
-      object-fit: cover;
-      object-position: bottom;
-
-   }
 }
 
 .div2 {
    grid-area: 1 / 2 / 2 / 3;
+   padding: 30px 30px 5px 30px;
 }
 
 .div3 {
    grid-area: 1 / 4 / 2 / 5;
+   padding: 30px 30px 5px 30px;
 }
 
 .div4 {
    grid-area: 2 / 2 / 3 / 5;
    display: flex;
    justify-content: center;
+   align-items: center;
 
    .parent__img-item {
       width: 200px;
@@ -279,14 +287,96 @@
 
 .div5 {
    grid-area: 3 / 2 / 4 / 3;
+   padding: 30px 5px 30px 30px;
 }
 
 .div6 {
    grid-area: 3 / 4 / 4 / 5;
+   padding: 30px 5px 30px 30px;
 }
 
 .div7 {
    grid-area: 1 / 5 / 4 / 6;
    display: flex;
    align-items: center;
+}
+
+// benefit
+// ///////////////
+.benefit__inner {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+
+   .benefit__item {
+      display: flex;
+      flex-direction: column;
+
+      transition: all 1s;
+
+   }
+}
+
+
+
+.benefit__item:hover .benefit__img {
+   transform: scale(2, 2);
+}
+
+
+.benefit__title-block {
+   width: 100%;
+   text-align: center;
+
+   .benefit__title-item {
+      font-size: 40px;
+      margin-bottom: 120px;
+   }
+}
+
+.benefit__img {
+   width: 150px;
+   height: 150px;
+   transition: all 0.3s;
+}
+
+.benefit__item-block {
+   margin-top: 30px;
+   border: 3px solid #f0a060;
+   border-radius: 10px;
+
+   .benefit__item-text {
+      padding: 7px 15px;
+      text-align: center;
+      transition: all 0.3s;
+
+
+   }
+}
+
+.benefit__button {
+   width: 100%;
+   text-align: center;
+   margin-top: 120px;
+
+   .benefit__button-item {
+      width: 300px;
+      color: #FFF;
+      font-size: 40px;
+      background-color: #f0a060;
+      border-radius: 15px;
+      border: none;
+      padding: 7px 25px;
+      transition: all 1s;
+
+   }
+}
+
+.benefit__button:hover .benefit__button-item {
+   background-color: #6af060;
+   border: none;
+
+
+   box-shadow: 5px 5px 2px 1px rgba(14, 14, 14, 0.2);
+   transform: scale(2, 2);
 }
