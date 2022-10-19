@@ -1,0 +1,14 @@
+%button__hover {
+   border: none;
+
+   transition: all 0.3s;
+   box-shadow: 5px 5px 2px 1px rgba(14, 14, 14, 0.2);
+   background-color: #6af060;
+
+}
+
+%border__text {
+   border-radius: 10px;
+   background-color: #ffc8a8;
+   padding: 10px;
+}

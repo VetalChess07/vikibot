@@ -83,3 +83,26 @@
 
    }
 }
+
+@keyframes benefit__button {
+   0% {
+      width: 400px;
+   }
+
+   25% {
+      width: 430px;
+
+   }
+
+   50% {
+      width: 450px;
+   }
+
+   75% {
+      width: 430px;
+   }
+
+   100% {
+      width: 400px;
+   }
+}
