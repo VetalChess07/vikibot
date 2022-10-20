@@ -1,4 +1,4 @@
-var swiper_card = new Swiper(".mySwiper1", {
+let swiper_card = new Swiper(".mySwiper1", {
    effect: "cards",
    grabCursor: true,
 });
