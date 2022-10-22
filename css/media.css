@@ -1,0 +1,9 @@
+@media (max-width: 1265px) {
+  h2 {
+    color: red;
+  }
+
+  h5 {
+    color: aqua;
+  }
+}

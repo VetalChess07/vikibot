@@ -2,6 +2,7 @@
 @import "resetstyles.scss";
 @import "keyframes.scss";
 
+
 @font-face {
    font-family: 'Montserrat-ExtraBold';
    src: url(../fonts/Montserrat-ExtraBold.ttf);
@@ -45,28 +46,38 @@
    flex-direction: row;
    justify-content: center;
    align-items: center;
+
+
+}
+
+.logo {
+   border-radius: 15px;
 }
 
 .phone__img,
-.instagram__img {
+.instagram__img,
+.vk__img,
+.telegram__img {
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 80px;
-   height: 80px;
-   background-color: #f0a060;
+   width: 70px;
+   height: 70px;
+   background-color: initial;
    border-radius: 50%;
+   transition: all 0.3s;
 
+   img:hover {
+
+      width: 80px;
+      height: 80px;
+
+
+
+   }
 
 }
 
-.tools__item:hover {
-   transition: 0.3s linear;
-   width: 85px;
-   height: 85px;
-   background-color: #FFF;
-   border: 2px solid #f0a060;
-}
 
 .tools__item:not(:first-child) {
    margin-left: 37px;
@@ -184,6 +195,9 @@
 
 .hero {
    position: relative;
+   max-width: 1900px;
+   width: 100%;
+   margin: 0 auto;
 }
 
 // values
@@ -192,18 +206,21 @@
    margin-top: 330px;
    width: 100%;
    height: 100%;
-   max-width: none;
+   max-width: 2100px;
    padding: 0;
    background-image: url(../img/pthon.png);
    background-repeat: repeat-x;
    background-position: center;
    background-size: cover;
    overflow: hidden;
+
 }
 
 .values {
-   margin-top: 130px;
+
    width: 100%;
+   max-width: 1900px;
+
 
    padding: 135px 0 50px 0;
 
@@ -248,24 +265,24 @@
 
 
 
-.div1 {
+.parent__item1 {
    grid-area: 1 / 1 / 4 / 2;
    display: flex;
    align-items: center;
 
 }
 
-.div2 {
+.parent__item2 {
    grid-area: 1 / 2 / 2 / 3;
    padding: 30px 30px 5px 30px;
 }
 
-.div3 {
+.parent__item3 {
    grid-area: 1 / 4 / 2 / 5;
    padding: 30px 30px 5px 30px;
 }
 
-.div4 {
+.parent__item4 {
    grid-area: 2 / 2 / 3 / 5;
    display: flex;
    justify-content: center;
@@ -277,17 +294,17 @@
    }
 }
 
-.div5 {
+.parent__item5 {
    grid-area: 3 / 2 / 4 / 3;
    padding: 30px 5px 30px 30px;
 }
 
-.div6 {
+.parent__item6 {
    grid-area: 3 / 4 / 4 / 5;
    padding: 30px 5px 30px 30px;
 }
 
-.div7 {
+.parent__item7 {
    grid-area: 1 / 5 / 4 / 6;
    display: flex;
    align-items: center;
@@ -417,6 +434,7 @@
 
 .swiper {
    width: 100%;
+   max-width: 2100px;
    position: relative;
    margin: auto auto;
    overflow: hidden;
@@ -901,3 +919,5 @@
       }
    }
 }
+
+@import "media.scss";
