@@ -331,6 +331,7 @@
 .benefit__item:hover .benefit__img {
    transform: scale(2, 2);
    overflow: hidden;
+   padding: 0 10px;
 }
 
 
@@ -500,10 +501,12 @@
 }
 
 .content__price {
+   width: 100%;
    padding: 30px;
 }
 
 .price__card {
+   width: 100%;
    background-color: #FFF;
    padding: 10px 10px;
    border-radius: 15px;
@@ -651,21 +654,17 @@
 
 
 .instruction__inner {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100%;
    padding: 10px;
-
-
 }
 
 .instruction__img {
    width: 100%;
    object-fit: contain;
-   height: 700px;
 }
 
+.section__inner {
+   display: none;
+}
 
 
 // card
