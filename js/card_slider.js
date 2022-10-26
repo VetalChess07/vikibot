@@ -3,26 +3,47 @@ let swiper_card = new Swiper(".mySwiper1", {
    grabCursor: true,
 });
 
-let image = document.querySelectorAll('*[data-modal-img]');
+let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+let popup = document.querySelector('.popup'); // Само окно
+let openPopupButtons = document.querySelectorAll('.swiper-slide__card'); // Кнопки для показа окна
+let closePopupButton = document.querySelector('.close-popup');
 
-for (let i = 0; i < image.length; i++) {
-   image[i].addEventListener('click', function () {
-      let name = image[i].getAttribute('data-modal-img');
-      let modal = document.querySelector("[data-modal-window='" + name + "']");
-      modal.style.display = "block";
-      let close = modal.querySelector(".close_modal_window");
-      close.addEventListener('click', function () {
-         modal.style.display = "none";
-      })
+
+
+openPopupButtons.forEach((button) => { // Перебираем все кнопки
+   button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+      e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+      popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+      popup.classList.add('active'); // И для самого окна
+
+
    })
-}
+});
 
-window.onclick = function (e) {
-   if (e.target.hasAttribute('data-modal-window')) {
-      let modals = document.querySelectorAll("*[data-modal-window]")
-      for (let i = 0; i < modals.length; i++) {
-         modals[i].style.display = "none";
-      }
+closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
+   popupBg.classList.remove('active'); // Убираем активный класс с фона
+   popup.classList.remove('active'); // И с окна
+
+
+});
+
+document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+   if (e.target === popupBg) { // Если цель клика - фот, то:
+      popupBg.classList.remove('active'); // Убираем активный класс с фона
+      popup.classList.remove('active'); // И с окна
 
    }
-}
+});
+
+const cards = document.querySelectorAll(".swiper-slide__card");
+cards.forEach((card) => {
+   card.addEventListener("click", (e) => {
+      let targetEl = e.target;
+      let targetCardTitle = card.querySelector(".card__title");
+      let targetCardImage = card.querySelector(".card__image");
+      let targetCardText = card.querySelector(".card__text");
+      document.querySelector(".popup__title").textContent = targetCardTitle.textContent;
+      document.querySelector(".popup__text").textContent = targetCardText.textContent;
+      document.querySelector(".popup__image").src = targetCardImage.src;
+   });
+});
