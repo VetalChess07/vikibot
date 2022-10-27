@@ -35,6 +35,25 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Roboto-Medium";
+  cursor: url(../img/cursor.png), auto;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0a060;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6af060;
+  border-radius: 15px;
+  border: 3px solid #f0a060;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b8602;
 }
 
 /* Убираем внутренние отступы */
@@ -634,7 +653,6 @@ h2 {
 }
 
 .benefit__img {
-  width: 150px;
   height: 150px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -975,7 +993,7 @@ h2 {
   left: 120px;
 }
 .gallery__top-inner .gallery__top-item .gallery__top-text {
-  width: 400px;
+  width: 330px;
   font-size: 15px;
   padding: 10px;
   border: 2px solid yellow;
@@ -991,6 +1009,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 10px;
 }
 .card .card__img {
   width: 100%;
@@ -1077,7 +1096,6 @@ h2 {
   pointer-events: all;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
-  background-color: aqua;
   display: block;
   z-index: 10;
 }
@@ -1101,19 +1119,29 @@ h2 {
           align-items: center;
   width: 100%;
   height: 100%;
-  padding: 25px;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
+.popup .popup__inner-img {
+  padding: 10px;
+}
 .popup .popup__img-block {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .popup .popup__img-block .popup__image {
-  padding: 10px;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 600px;
+  max-width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .popup .popup__text-block {
   width: 50%;
@@ -1144,18 +1172,12 @@ h2 {
 }
 
 .card__text {
-  color: red;
   font-size: 0;
 }
 
 .card__text.active {
   color: #FFF;
   font-size: 15px;
-}
-
-.popup__text {
-  color: red;
-  font-size: 20px;
 }
 
 .popup.active {
@@ -1399,6 +1421,11 @@ h2 {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .swiper__card {
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+  }
 }
 @media (max-width: 840px) {
   .slide__instruction {
@@ -1416,6 +1443,30 @@ h2 {
 
   .instruction__img {
     height: none;
+  }
+
+  .gallery__top-inner .gallery__top-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .gallery__top-inner .gallery__top-item .gallery__top-text-inner {
+    position: static;
+    margin: 20px 0px;
+  }
+
+  .gallery__top-inner .gallery__top-item .gallery__top-text {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
   }
 }
 @media (max-width: 780px) {
@@ -1561,6 +1612,29 @@ h2 {
     font-size: 25px;
     text-align: center;
     padding: 10px 0;
+    margin: 20px 0;
+  }
+
+  .popup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .popup .popup__img-block {
+    width: 70%;
+  }
+  .popup .popup__text-block {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .popup .popup__text-block .popup__text {
+    font-size: 20px;
+  }
+  .popup .popup__text-block .popup__title {
+    font-size: 30px;
   }
 }
 @media (max-width: 576px) {
@@ -1748,5 +1822,34 @@ h2 {
   .dialog__green {
     right: 0px;
     bottom: 89px;
+  }
+
+  .swiper__card {
+    width: 250px;
+    height: 450px;
+    padding: 10px;
+  }
+
+  .popup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 100px 0;
+  }
+  .popup .popup__img-block {
+    width: 70%;
+  }
+  .popup .popup__text-block {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .popup .popup__text-block .popup__text {
+    font-size: 15px;
+  }
+  .popup .popup__text-block .popup__title {
+    font-size: 20px;
   }
 }

@@ -17,12 +17,14 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
       popup.classList.add('active'); // И для самого окна
 
 
+
    })
 });
 
 closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
    popupBg.classList.remove('active'); // Убираем активный класс с фона
    popup.classList.remove('active'); // И с окна
+
 
 
 });
@@ -42,8 +44,16 @@ cards.forEach((card) => {
       let targetCardTitle = card.querySelector(".card__title");
       let targetCardImage = card.querySelector(".card__image");
       let targetCardText = card.querySelector(".card__text");
+
       document.querySelector(".popup__title").textContent = targetCardTitle.textContent;
       document.querySelector(".popup__text").textContent = targetCardText.textContent;
       document.querySelector(".popup__image").src = targetCardImage.src;
+
    });
 });
+
+
+
+
+
+

@@ -346,7 +346,7 @@
 }
 
 .benefit__img {
-   width: 150px;
+
    height: 150px;
    transition: all 0.3s;
 }
@@ -702,7 +702,7 @@
       }
 
       .gallery__top-text {
-         width: 400px;
+         width: 330px;
          font-size: 15px;
          padding: 10px;
          border: 2px solid yellow;
@@ -716,6 +716,7 @@
    overflow: hidden;
    display: flex;
    justify-content: center;
+   padding: 0 10px;
 
    .card__img {
       width: 100%;
@@ -794,6 +795,7 @@
    pointer-events: none;
    transition: 0.5s all;
    display: none;
+
 }
 
 .popup__bg.active {
@@ -802,9 +804,10 @@
    opacity: 1;
    pointer-events: all;
    transition: 0.5s all;
-   background-color: aqua;
    display: block;
    z-index: 10;
+
+
 }
 
 .popup {
@@ -819,18 +822,26 @@
    align-items: center;
    width: 100%;
    height: 100%;
-   padding: 25px;
    transition: 0.5s all;
 
 
+   .popup__inner-img {
+      padding: 10px;
+   }
+
    .popup__img-block {
       width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .popup__image {
-         padding: 10px;
+
          width: 100%;
-         object-fit: contain;
-         height: 600px;
+         max-width: 500px;
+
+         object-fit: cover;
+
       }
 
    }
@@ -863,7 +874,7 @@
 }
 
 .card__text {
-   color: red;
+
    font-size: 0;
    // opacity: 0;
    // position: absolute;
@@ -875,10 +886,6 @@
 
 }
 
-.popup__text {
-   color: red;
-   font-size: 20px;
-}
 
 
 .popup.active {
