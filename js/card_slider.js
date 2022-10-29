@@ -3,10 +3,58 @@ let swiper_card = new Swiper(".mySwiper1", {
    grabCursor: true,
 });
 
+btnOff = document.querySelectorAll('.swiper-slide__card'),
+   btnOn = document.querySelectorAll('.close-popup'),
+   body = document.body;
+
+btnOff.forEach(b => b.addEventListener('click', (b) => {
+   disableScroll();
+   // b.currentTarget.style.pointerEvents = 'none';
+   // btnOn.style.pointerEvents = 'auto';
+}));
+
+btnOn.forEach(b => b.addEventListener('click', (b) => {
+   enableScroll();
+   // b.currentTarget.style.pointerEvents = 'none';
+   // btnOff.style.pointerEvents = 'auto';
+}));
+
+let disableScroll = function () {
+   let pagePosition = window.scrollY;
+   document.body.classList.add('active');
+   document.body.dataset.position = pagePosition;
+   document.body.style.top = -pagePosition + 'px';
+}
+
+
+let enableScroll = function () {
+   let pagePosition = parseInt(document.body.dataset.position, 10);
+   document.body.style.top = 'auto';
+   document.body.classList.remove('active');
+   window.scroll({ top: pagePosition, left: 0 });
+   document.body.removeAttribute('active');
+}
+
+// btnOff.addEventListener('click', (e) => {
+//    disableScroll();
+//    e.currentTarget.style.pointerEvents = 'none';
+//    btnOn.style.pointerEvents = 'auto';
+// });
+
+// btnOn.addEventListener('click', (e) => {
+//    enableScroll();
+//    e.currentTarget.style.pointerEvents = 'none';
+//    btnOff.style.pointerEvents = 'auto';
+// });
+
+
 let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
 let popup = document.querySelector('.popup'); // Само окно
 let openPopupButtons = document.querySelectorAll('.swiper-slide__card'); // Кнопки для показа окна
 let closePopupButton = document.querySelector('.close-popup');
+// let body = document.body;
+// console.log(body)
+
 
 
 
@@ -15,8 +63,7 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
       e.preventDefault(); // Предотвращаем дефолтное поведение браузера
       popupBg.classList.add('active'); // Добавляем класс 'active' для фона
       popup.classList.add('active'); // И для самого окна
-
-
+      body.classList.add('active')
 
    })
 });
@@ -24,8 +71,7 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
 closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
    popupBg.classList.remove('active'); // Убираем активный класс с фона
    popup.classList.remove('active'); // И с окна
-
-
+   body.classList.remove('active');
 
 });
 
@@ -33,11 +79,12 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
    if (e.target === popupBg) { // Если цель клика - фот, то:
       popupBg.classList.remove('active'); // Убираем активный класс с фона
       popup.classList.remove('active'); // И с окна
+      body.classList.remove('active');
 
    }
 });
 
-const cards = document.querySelectorAll(".swiper-slide__card");
+cards = document.querySelectorAll(".swiper-slide__card");
 cards.forEach((card) => {
    card.addEventListener("click", (e) => {
       let targetEl = e.target;

@@ -2,12 +2,7 @@
 *::before,
 *::after {
    box-sizing: border-box;
-}
 
-body {
-   box-sizing: border-box;
-   font-family: 'Roboto-Medium';
-   cursor: url(../img/cursor.png), auto;
 }
 
 ::-webkit-scrollbar {
@@ -91,7 +86,15 @@ html {
 body {
    overflow-x: hidden;
    box-sizing: border-box;
+   font-family: 'Roboto-Medium';
+   cursor: url(../img/cursor.png), auto;
 }
+
+body.active {
+   overflow: hidden;
+   height: 100vh;
+}
+
 
 h2 {
    font-size: 40px;

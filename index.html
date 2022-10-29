@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="body">
+<body>
    <header class="header">
       <div class="wrap">
          <div class="header__inner">
@@ -20,8 +20,12 @@
                   <img class="logo" src="img/logo.png" alt="logo">
                </a>
             </div>
-
-            <div class="header__items ">
+            <div class="header__items">
+               <a href="#"><button class="header__button button ">
+                     Купить
+                  </button></a>
+            </div>
+            <div class="header__items header__items-messenger">
                <div class="tools__item instagram__img">
                   <a class="link__header" href="#"><img src="img/001-instagram.png" alt="" class="tools__img"></a>
                </div>
@@ -57,7 +61,7 @@
                      жми
                      на кнопку!
                   </p>
-                  <a href="#"><button class="intro__button button ">
+                  <a href="#"><button class="intro__button button button__delete">
                         Купить
                      </button></a>
                </div>
@@ -67,7 +71,13 @@
 
                   <img src="img/cube.png" alt="" class="intro__figures cubes">
 
+
+                  <a href="#"><button class="intro__button button intro__button-adaptiv">
+                        Купить
+                     </button></a>
                </div>
+
+
             </div>
          </div>
 
@@ -301,10 +311,6 @@
 
    <section class="gallery">
 
-
-
-
-
       <div class="gallery__title-inner">
          <h2 class="gallery__title">
             Медиатека
@@ -325,30 +331,6 @@
       </div>
 
       <div class="card">
-
-         <div class="popup__bg">
-            <div class="popup">
-               <p class="close-popup ">X</p>
-               <div class="popup__img-block">
-                  <div class="popup__item popup__inner-img">
-                     <img class="popup__image" src="" alt="">
-                  </div>
-               </div>
-               <div class="popup__text-block">
-                  <div class="popup__item">
-                     <p class="popup__title"></p>
-                  </div>
-                  <div class="popup__item">
-                     <p class="popup__text"></p>
-                  </div>
-
-               </div>
-
-
-
-            </div>
-         </div>
-
          <div class="swiper__card swiper__card mySwiper1">
             <div class="swiper-wrapper swiper-wrapper-card ">
                <div class="swiper-slide swiper-slide__card ">
@@ -405,7 +387,32 @@
                </div>
             </div>
          </div>
+
+
+         <div class="popup__bg">
+            <div class="popup">
+               <p class="close-popup ">X</p>
+               <div class="popup__img-block">
+                  <div class="popup__item popup__inner-img">
+                     <img class="popup__image" src="" alt="">
+                  </div>
+               </div>
+               <div class="popup__text-block">
+                  <div class="popup__item">
+                     <p class="popup__title"></p>
+                  </div>
+                  <div class="popup__item">
+                     <p class="popup__text"></p>
+                  </div>
+
+               </div>
+
+
+
+            </div>
+         </div>
       </div>
+
 
    </section>
    <footer class="footer">
@@ -463,10 +470,13 @@
 
 
 
+
+
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
    <script src="js/script.js"></script>
    <script src="js/card_slider.js"></script>
+
 
 </body>
 

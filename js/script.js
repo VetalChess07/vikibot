@@ -15,10 +15,11 @@ const swiper = new Swiper('.swiper', {
    },
 
    // And if we need scrollbar
-   // scrollbar: {
+   // scrollbar: {ss
    //    el: '.swiper-scrollbar',
    // },
 });
+
 
 
 
