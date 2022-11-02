@@ -52,7 +52,7 @@
 
    .intro__inner {
       .intro__item-text {
-         width: 35%;
+         width: 45%;
 
       }
 
@@ -87,8 +87,12 @@
       }
    }
 
+   .burger-btn.open {
+      content: url("../img/close.png");
+      width: 50px;
+   }
 
-   .burger.class {
+   .burger.open {
       display: block;
       overflow: hidden;
       width: 100%;
@@ -96,7 +100,7 @@
 
 
 
-      .burger__inner.class {
+      .burger__inner.open {
          overflow: hidden;
          position: absolute;
          top: 0;
@@ -208,9 +212,6 @@
          }
       }
 
-      .instruction__inner {
-         .instruction__img {}
-      }
 
    }
 
@@ -571,7 +572,7 @@
       margin: 90px auto 0px auto;
    }
 
-   .burger__inner.class {
+   .burger__inner.open {
       justify-content: center;
    }
 
@@ -579,11 +580,7 @@
       top: 0;
    }
 
-   .close-btn {
-      width: 20px;
-      height: 20px;
 
-   }
 
    .intro__inner {
       flex-direction: column;

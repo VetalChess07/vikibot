@@ -1,0 +1,14 @@
+{
+    "name": "RobotViki",
+    "short_name": "RobotViki",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f0a060",
+    "background_color": "#f0a060",
+    "display": "standalone"
+}

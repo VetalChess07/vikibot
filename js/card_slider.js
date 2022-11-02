@@ -93,18 +93,13 @@ let burgerBtn = document.querySelector(".burger-btn")
 
 burgerBtn.addEventListener('click', (e) => {
    let burger = document.querySelector('.burger')
-   burger.classList.toggle("class");
+   burger.classList.toggle("open");
+   burgerBtn.classList.toggle("open");
    let burgerInner = document.querySelector('.burger__inner')
-   burgerInner.classList.toggle("class");
+   burgerInner.classList.toggle("open");
    // let burgerItem = document.querySelectorAll('.burger__item')
    // burgerItem.classList.toggle("class");
 });
-// burger.addEventListener('click', (e) => {
-//    burger.classList.remove('active');
-//    burgerInner.classList.remove('active');
-
-
-// });
 
 
 
