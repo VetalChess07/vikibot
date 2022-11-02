@@ -103,3 +103,23 @@
       width: 400px;
    }
 }
+
+@keyframes img__gallery {
+   0% {
+      transform: translateY(10px);
+
+   }
+
+
+   50% {
+      transform: translateY(80px);
+
+   }
+
+
+
+   100% {
+      transform: translateY(10px);
+
+   }
+}

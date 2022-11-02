@@ -35,17 +35,7 @@ let enableScroll = function () {
    document.body.removeAttribute('active');
 }
 
-// btnOff.addEventListener('click', (e) => {
-//    disableScroll();
-//    e.currentTarget.style.pointerEvents = 'none';
-//    btnOn.style.pointerEvents = 'auto';
-// });
 
-// btnOn.addEventListener('click', (e) => {
-//    enableScroll();
-//    e.currentTarget.style.pointerEvents = 'none';
-//    btnOff.style.pointerEvents = 'auto';
-// });
 
 
 let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
@@ -98,6 +88,23 @@ cards.forEach((card) => {
 
    });
 });
+
+let burgerBtn = document.querySelector(".burger-btn")
+
+burgerBtn.addEventListener('click', (e) => {
+   let burger = document.querySelector('.burger')
+   burger.classList.toggle("class");
+   let burgerInner = document.querySelector('.burger__inner')
+   burgerInner.classList.toggle("class");
+   // let burgerItem = document.querySelectorAll('.burger__item')
+   // burgerItem.classList.toggle("class");
+});
+// burger.addEventListener('click', (e) => {
+//    burger.classList.remove('active');
+//    burgerInner.classList.remove('active');
+
+
+// });
 
 
 
