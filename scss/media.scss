@@ -737,9 +737,16 @@
             width: 100%;
 
             .popup__image {
-               max-width: 100%;
+               width: 100%;
+               max-width: 300px;
+
+               object-fit: cover;
             }
          }
+
+
+
+
 
 
          .popup__text-block {
