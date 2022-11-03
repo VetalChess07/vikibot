@@ -22,10 +22,11 @@
 // header
 // =====================
 .header {
-   position: fixed;
+   position: sticky;
 
+   background-color: #FFF;
    padding-top: 10px;
-
+   transition: all 3s ease;
 
    .burger {
       display: none;
@@ -38,7 +39,13 @@
 
 
 
+}
 
+.header.fixed {
+   position: fixed;
+   left: 0;
+   top: 0;
+   transition: all 3s ease;
 }
 
 .header__inner {
@@ -61,6 +68,7 @@
 
 .logo {
    border-radius: 15px;
+   max-height: 80px;
    width: 100%;
    object-fit: cover;
 }
@@ -68,11 +76,11 @@
 
 .header__button {
    background-color: #f0a060;
-   margin-top: 10px;
-   padding: 20px 55px;
+
+   padding: 20px 30px;
    border-radius: 20px;
    border: none;
-   font-size: 40px;
+   font-size: 25px;
    color: #FFF;
 
 
@@ -89,21 +97,10 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 70px;
-   height: 70px;
+
    background-color: initial;
    border-radius: 50%;
    transition: all 0.3s;
-
-   img:hover {
-
-      width: 80px;
-      height: 80px;
-
-
-
-   }
-
 }
 
 .burger-btn {
@@ -231,8 +228,6 @@
 .hero {
    position: relative;
    max-width: 1900px;
-
-   margin: 145px auto 0px auto;
 }
 
 // values
@@ -363,11 +358,7 @@
 
 
 
-.benefit__item:hover .benefit__img {
-   transform: scale(2, 2);
-   overflow: hidden;
-   padding: 0 10px;
-}
+
 
 
 .benefit__title-block {
@@ -962,7 +953,7 @@
    margin-top: 150px;
    background-image: url("../img/pthon.png");
    background-size: cover;
-   background-position: top;
+   background-position: center;
 
 
    padding: 30px 0px;
