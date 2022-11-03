@@ -317,24 +317,17 @@ h2 {
   src: url(../fonts/Roboto-Medium.ttf);
 }
 .header {
-  position: sticky;
+  position: fixed;
+  margin-bottom: 10px;
   background-color: #FFF;
   padding-top: 10px;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
+  -webkit-transition: all 3s ease !important;
+  transition: all 3s ease !important;
   width: 100%;
   z-index: 3;
 }
 .header .burger {
   display: none;
-}
-
-.header.fixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
 }
 
 .header__inner {
@@ -514,6 +507,7 @@ h2 {
 .hero {
   position: relative;
   max-width: 1900px;
+  margin: 145px auto 0px auto;
 }
 
 .section__values {
@@ -1861,6 +1855,10 @@ h2 {
 
   .header__items-burger {
     width: 100%;
+  }
+
+  .hero {
+    margin: 90px auto 0px auto;
   }
 
   .burger__inner.open {

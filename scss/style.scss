@@ -22,11 +22,14 @@
 // header
 // =====================
 .header {
-   position: sticky;
+   position: fixed;
 
+
+
+   margin-bottom: 10px;
    background-color: #FFF;
    padding-top: 10px;
-   transition: all 3s ease;
+   transition: all 3s ease !important;
 
    .burger {
       display: none;
@@ -34,19 +37,14 @@
 
    width: 100%;
 
-   // position: fixed;
+
    z-index: 3;
 
 
 
 }
 
-.header.fixed {
-   position: fixed;
-   left: 0;
-   top: 0;
-   transition: all 3s ease;
-}
+
 
 .header__inner {
 
@@ -228,6 +226,7 @@
 .hero {
    position: relative;
    max-width: 1900px;
+   margin: 145px auto 0px auto;
 }
 
 // values
