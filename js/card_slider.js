@@ -1,19 +1,15 @@
 let swiper_card = new Swiper(".swiper ", {
-   loop: true,
 
-   // If we need pagination
-   // pagination: {
-   //    el: '.swiper-pagination',
-   // },
 
-   // Navigation arrows
+   speed: 1000,
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
    },
    pagination: {
       el: '.swiper-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
 
 });

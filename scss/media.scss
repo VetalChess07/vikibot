@@ -178,7 +178,7 @@
    }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 880px) {
 
    .values {
 
@@ -188,6 +188,32 @@
    .benefit__title-item {
       font-size: 40px;
       margin: 50px 0;
+   }
+
+   .swiper-button-prev,
+   .swiper-button-next {
+      display: block;
+      position: static;
+   }
+
+
+
+   .box__arrew {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+   }
+
+   .items__body {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+   }
+
+   .items__body {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
    }
 
 }
@@ -369,21 +395,6 @@
          object-fit: contain;
       }
    }
-
-   .swiper-pagination {
-      display: block;
-      padding: 10px 0;
-      color: red;
-   }
-
-   .swiper-pagination-bullet-active {}
-
-   .swlider__btn-box {
-      display: none;
-
-   }
-
-
 }
 
 @media (max-width: 480px) {
@@ -482,6 +493,11 @@
 
    .card__image img {
       max-width: 130px;
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      display: none;
    }
 
 
