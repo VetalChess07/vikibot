@@ -1,5 +1,5 @@
 @charset "UTF-8";
-button:hover, .benefit__button button:hover, .button:hover, .header__button:hover {
+.discount .discount__inner .discount__body .discount__item .form__box .form__btn:hover, .card__btn:hover, .benefit__button .benefit__button-item:hover, .button:hover, .header__button:hover {
   border: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -357,6 +357,8 @@ h2 {
   padding: 20px 30px;
   border-radius: 20px;
   border: none;
+}
+.header__button a {
   font-size: 25px;
   color: #FFF;
 }
@@ -432,6 +434,8 @@ h2 {
   color: #f0a060;
   font-size: 72px;
   padding: 5px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .intro__text {
@@ -439,12 +443,16 @@ h2 {
   color: #000000;
   font-size: 43px;
   padding: 5px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .intro__description {
   margin-top: 130px;
   font-size: 30px;
   padding: 5px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .intro__button {
@@ -452,9 +460,12 @@ h2 {
   margin-left: 100px;
   background-color: #f0a060;
   margin-top: 10px;
-  padding: 20px 55px;
   border-radius: 20px;
   border: none;
+  padding: 20px 55px;
+  text-align: center;
+}
+.intro__button a {
   font-size: 40px;
   color: #FFF;
 }
@@ -689,18 +700,21 @@ h2 {
 }
 
 .benefit__button {
-  width: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 120px;
 }
 .benefit__button .benefit__button-item {
+  text-align: center;
   width: 400px;
   background-color: #f0a060;
   padding: 20px 55px;
   border-radius: 20px;
   border: none;
-  font-size: 40px;
-  color: #FFF;
   -webkit-animation-name: benefit__button;
           animation-name: benefit__button;
   -webkit-animation-duration: 3s;
@@ -709,6 +723,10 @@ h2 {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+.benefit__button .benefit__button-item a {
+  font-size: 40px;
+  color: #FFF;
 }
 
 .section__card {
@@ -750,7 +768,8 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 350px;
-  background-color: #bfbfbf;
+  background-color: #FBDEC6;
+  border-radius: 15px;
 }
 
 .card__image {
@@ -818,6 +837,125 @@ h2 {
   height: 100%;
 }
 
+.section__discount {
+  background-color: #f0a060;
+  width: 100%;
+}
+.section__discount .discount__title {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.discount .discount__inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+}
+.discount .discount__inner .discount__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.discount .discount__inner .discount__body .discount__item {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+.discount .discount__inner .discount__body .discount__item h4 {
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+.discount .discount__inner .discount__body .discount__item p {
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.5em;
+}
+.discount .discount__inner .discount__body .discount__item .discount__img {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.discount .discount__inner .discount__body .discount__item .form__box {
+  margin-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.discount .discount__inner .discount__body .discount__item .form__box .form__discount {
+  width: 100%;
+  max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+.discount .discount__inner .discount__body .discount__item .form__box .form__discount .form__title {
+  font-size: 20px;
+}
+.discount .discount__inner .discount__body .discount__item .form__box .form__discount .discount__input {
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  padding: 5px 10px;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 30px;
+}
+.discount .discount__inner .discount__body .discount__item .form__box .form__discount .discount__input:focus,
+.discount .discount__inner .discount__body .discount__item .form__box .form__discount .discount__input:hover {
+  border: 2px solid #f0a060;
+  -webkit-box-shadow: 3px 5px 6px #000;
+          box-shadow: 3px 5px 6px #000;
+}
+.discount .discount__inner .discount__body .discount__item .form__box .form__btn {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #f0a060;
+  border-radius: 15px;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .section__swiper {
   margin-top: 50px;
 }
@@ -825,7 +963,7 @@ h2 {
 .swiper__title {
   text-align: center;
   font-size: 30px;
-  color: orange;
+  color: #f0a060;
 }
 
 .items {
@@ -850,7 +988,7 @@ h2 {
 
 .item__video {
   position: relative;
-  border: 2px solid orange;
+  border: 2px solid #f0a060;
   padding: 0 0 56% 0;
 }
 
@@ -868,7 +1006,7 @@ h2 {
   font-size: 20px;
   text-align: center;
   padding: 20px 5px;
-  background-color: orange;
+  background-color: #f0a060;
   border-radius: 0 0 15px 15px;
 }
 
@@ -884,13 +1022,13 @@ h2 {
 }
 
 .swiper-pagination-bullet-active {
-  background: orange;
+  background: #f0a060;
   padding: 10px;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: orange;
+  color: #f0a060;
 }
 
 .box__arrew {
@@ -966,7 +1104,8 @@ h2 {
   .intro__inner .intro__text {
     margin: 0 0 30px 0px;
     font-size: 36px;
-    width: 400px;
+    width: 100%;
+    max-width: 600px;
   }
   .intro__inner .intro__button {
     margin: 0;
@@ -1262,6 +1401,16 @@ h2 {
   .benefit__inner .benefit__item {
     padding: 20px 10px;
   }
+  .discount .discount__inner .discount__body .discount__item {
+    width: 100%;
+    padding: 0;
+  }
+  .discount .discount__inner .discount__body .discount__item .form__box .form__discount .form__title {
+    font-size: 15px;
+  }
+  .discount__item-img {
+    display: none;
+  }
   .footer__inner {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -1451,6 +1600,9 @@ h2 {
   }
   .card__image img {
     max-width: 130px;
+  }
+  .discount .discount__inner .discount__body .discount__item {
+    text-align: left;
   }
   .swiper-button-next,
 .swiper-button-prev {

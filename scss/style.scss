@@ -80,9 +80,12 @@
    padding: 20px 30px;
    border-radius: 20px;
    border: none;
-   font-size: 25px;
-   color: #FFF;
 
+   a {
+
+      font-size: 25px;
+      color: #FFF;
+   }
 
 }
 
@@ -111,6 +114,7 @@
 .tools__item:not(:first-child) {
    margin-left: 37px;
 }
+
 
 
 
@@ -159,7 +163,8 @@
    color: #f0a060;
    font-size: 72px;
    padding: 5px;
-
+   width: 100%;
+   max-width: 800px;
 
 }
 
@@ -168,6 +173,8 @@
    color: #000000;
    font-size: 43px;
    padding: 5px;
+   width: 100%;
+   max-width: 800px;
 
 }
 
@@ -175,6 +182,8 @@
    margin-top: 130px;
    font-size: 30px;
    padding: 5px;
+   width: 100%;
+   max-width: 800px;
 
 }
 
@@ -183,13 +192,18 @@
    margin-left: 100px;
    background-color: #f0a060;
    margin-top: 10px;
-   padding: 20px 55px;
+
    border-radius: 20px;
    border: none;
 
+   padding: 20px 55px;
+   text-align: center;
 
-   font-size: 40px;
-   color: #FFF
+   a {
+
+      font-size: 40px;
+      color: #FFF
+   }
 }
 
 
@@ -398,26 +412,32 @@
 }
 
 .benefit__button {
-   width: 100%;
-   text-align: center;
+   display: flex;
+   justify-content: center;
    margin-top: 120px;
 
-   button:hover {
+   .benefit__button-item:hover {
       @extend %button__hover;
    }
 
    .benefit__button-item {
+
+      text-align: center;
       width: 400px;
       background-color: #f0a060;
       padding: 20px 55px;
       border-radius: 20px;
       border: none;
-      font-size: 40px;
-      color: #FFF;
+
       animation-name: benefit__button;
       animation-duration: 3s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      a {
+         font-size: 40px;
+         color: #FFF;
+      }
    }
 }
 
@@ -453,7 +473,8 @@
    display: flex;
    flex-direction: column;
    width: 350px;
-   background-color: #bfbfbf;
+   background-color: #FBDEC6;
+   border-radius: 15px;
 }
 
 .card__image {
@@ -507,13 +528,142 @@
 
 }
 
-button:hover {
+.card__btn:hover {
    @extend %button__hover;
 }
 
 .cards__item .card {
    height: 100%;
 }
+
+// discount
+.section__discount {
+   background-color: #f0a060;
+   width: 100%;
+
+   .discount__title {
+      font-size: 40px;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+   }
+}
+
+.discount {
+   display: flex;
+   justify-content: center;
+
+   .discount__inner {
+      width: 100%;
+      max-width: 1200px;
+      padding: 10px;
+
+      .discount__body {
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         .discount__item {
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+
+            h4 {
+               padding: 10px;
+               font-size: 30px;
+               color: #fff;
+
+            }
+
+            p {
+               padding: 10px;
+               font-size: 15px;
+               color: #fff;
+               line-height: 1.5em;
+            }
+
+            .discount__img {
+               width: 100%;
+               max-width: 600px;
+               height: 500px;
+               object-fit: contain;
+
+            }
+
+            .form__box {
+               margin-top: 30px;
+               width: 100%;
+               display: flex;
+               justify-content: center;
+
+               align-items: center;
+
+               .form__discount {
+                  width: 100%;
+                  max-width: 350px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+
+                  padding: 20px;
+                  border-radius: 15px;
+                  background-color: white;
+
+                  .form__title {
+                     font-size: 20px;
+                  }
+
+
+
+
+                  .discount__input {
+                     width: 100%;
+                     font-size: 20px;
+                     border: 2px solid rgb(0, 0, 0);
+                     border-radius: 15px;
+                     padding: 5px 10px;
+                     outline: none;
+                     transition: all 0.3s;
+                     margin-top: 30px;
+
+                  }
+
+
+
+                  .discount__input:focus,
+                  .discount__input:hover {
+                     border: 2px solid #f0a060;
+                     box-shadow: 3px 5px 6px #000;
+
+                  }
+
+
+               }
+
+
+               .form__btn {
+                  margin-top: 20px;
+                  padding: 20px;
+                  font-size: 20px;
+                  color: #fff;
+                  background-color: #f0a060;
+                  border-radius: 15px;
+                  border: none;
+                  transition: all 0.3s;
+               }
+
+               .form__btn:hover {
+                  @extend %button__hover;
+               }
+            }
+         }
+
+      }
+   }
+
+}
+
 
 // slider
 // ==========================
@@ -524,7 +674,7 @@ button:hover {
 .swiper__title {
    text-align: center;
    font-size: 30px;
-   color: orange;
+   color: #f0a060;
 }
 
 .items {
@@ -550,7 +700,7 @@ button:hover {
 
 .item__video {
    position: relative;
-   border: 2px solid orange;
+   border: 2px solid #f0a060;
    padding: 0 0 56% 0;
 }
 
@@ -568,7 +718,7 @@ button:hover {
    font-size: 20px;
    text-align: center;
    padding: 20px 5px;
-   background-color: orange;
+   background-color: #f0a060;
    border-radius: 0 0 15px 15px;
 }
 
@@ -586,13 +736,13 @@ button:hover {
 }
 
 .swiper-pagination-bullet-active {
-   background: orange;
+   background: #f0a060;
    padding: 10px; // красный цвет для активного квадрата
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-   color: orange;
+   color: #f0a060;
 }
 
 

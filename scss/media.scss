@@ -8,7 +8,8 @@
       .intro__text {
          margin: 0 0 30px 0px;
          font-size: 36px;
-         width: 400px;
+         width: 100%;
+         max-width: 600px;
 
 
       }
@@ -295,6 +296,20 @@
       }
    }
 
+   .discount .discount__inner .discount__body .discount__item {
+      width: 100%;
+      padding: 0;
+   }
+
+   .discount .discount__inner .discount__body .discount__item .form__box .form__discount .form__title {
+      font-size: 15px;
+   }
+
+
+   .discount__item-img {
+      display: none;
+   }
+
    .footer__inner {
       width: 100%;
       flex-direction: column;
@@ -493,6 +508,10 @@
 
    .card__image img {
       max-width: 130px;
+   }
+
+   .discount .discount__inner .discount__body .discount__item {
+      text-align: left;
    }
 
    .swiper-button-next,
