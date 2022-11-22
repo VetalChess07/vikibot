@@ -57,6 +57,7 @@
 }
 
 .header__items {
+   padding: 0 10px;
    display: flex;
 
    justify-content: center;
@@ -94,16 +95,18 @@
 }
 
 .phone__img,
-.instagram__img,
+.youtube__img,
 .vk__img,
 .telegram__img {
    display: flex;
    justify-content: center;
    align-items: center;
-
-   background-color: initial;
-   border-radius: 50%;
    transition: all 0.3s;
+
+}
+
+.tools__img:hover {
+   transform: scale(2);
 }
 
 .burger-btn {
@@ -112,7 +115,7 @@
 
 
 .tools__item:not(:first-child) {
-   margin-left: 37px;
+   margin-left: 30px;
 }
 
 
@@ -758,6 +761,7 @@
    background-image: url("../img/pthon.png");
    background-size: cover;
    background-position: center;
+   color: #FFF;
 
 
    padding: 30px 0px;
